@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORA Cohort 4 SEFE Attendance</title>
+    <link rel="stylesheet" href="Attend.css">
+    <script src="./attend.js"></script>
+</head>
+<body>
+ <div class="body-container">
+    <div class="container-left" >
+        <div class="logo">
+            <img src="./Assets/logo.png" alt="">
+        </div>
+        <div class="sefe">
+            <img src="./Assets/home1.png" alt="">
+        </div>
+    </div>
+    <div class="container-right">
+        <div>
+            <h1>Welcome to SOFTWARE FRONTEND DEVELOPER COHORT 4.0</h1>
+            <H3>Need an Accunt?</H3>
+            <h2><a href="signup.html"></a>Sign Up</h2>
+            <h3> Facilitator</h3>
+            <h3> Student</h3>
+        </div>
+        <div>
+            <h2>Sign In</h2>
+        </div>
+        <div>
+     
+            <form id="signin-form">
+                <div class="input-container">
+                  <div class="label">Matric Number-CHT4/24/SFT/___</div>
+                  <input type="text" id="username" name="username">
+                </div>
+                <br><br>
+                <div class="input-container">
+                  <div class="label">Password</div>
+                  <input type="password" id="password" name="password">
+                </div>              
+              </form>
+        </div>
+        <input type="checkbox" id="myCheckbox" name="myCheckbox">
+        <label for="myCheckbox">Remember Me</label>
+        <h3><a href="">Forgot Password</a></h3>
+        <input type="submit" value="Login">
+    </div>
+ </div>
+ <!-- https://einfosoft.com/templates/admin/kuber/source/light/#/authentication/signin -->
+</body>
+
+
+<!-- Yes, you can use HTML, CSS, and JS (JavaScript) to build a web app that interacts with Google Sheets. This is a great approach!
+
+Here's a high-level overview of how you can achieve your goal:
+
+1. HTML: Create the structure and content of your web app using HTML.
+2. CSS: Style your web app using CSS.
+3. JS: Use JavaScript to:
+    - Read and write data to your Google Sheet using the Google Sheets API.
+    - Manipulate and display data in your web app.
+    - Handle user interactions and update the Google Sheet accordingly.
+
+To connect to Google Sheets, you'll need to:
+
+1. Enable the Google Sheets API in your Google Cloud Console.
+2. Create credentials (OAuth client ID and secret) for your web app.
+3. Use a JavaScript library like Google Sheets API Client Library or Tabletop.js to interact with the Google Sheets API.
+
+Here's a simple example of how you can use HTML, CSS, and JS to display data from a Google Sheet:
+
+HTML:
+
+<table id="data-table"></table>
+
+CSS:
+
+#data-table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+JS:
+
+// Load data from Google Sheet
+fetch('(link unavailable)')
+  .then(response => response.json())
+  .then(data => {
+    // Display data in HTML table
+    const table = document.getElementById('data-table');
+    data.values.forEach(row => {
+      const rowHTML = '';
+      row.forEach(cell => {
+        rowHTML += `<td>${cell}</td>`;
+      });
+      table.innerHTML += `<tr>${rowHTML}</tr>`;
+    });
+  });
+
+This is just a basic example to get you started. You can build upon this foundation to create a more robust web app that meets your needs.
+
+Let me know if you have any questions or need further assistance! -->
+</html>

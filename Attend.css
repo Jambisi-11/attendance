@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+}
+.body-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; /* adjust the width as needed */
+    max-width: 1400px;
+    margin: 0 auto; /* center the container */
+  }
+  
+  .container-left {
+    width: 50%; 
+    background-color: rgb(238, 244, 244);
+    max-width: 1200px;
+    max-height: 110%;
+  }
+  
+  .container-right {
+    width: 50%; /* adjust the width as needed */
+    min-width: 400px; /* minimum width */
+
+  }
+  
+  /* media query for smaller screens */
+@media (max-width: 768px) {
+    .body-container {
+      flex-direction: column; /* stack containers vertically */
+    }
+    .container-left {
+      width: 100%; /* take up full width */
+    }
+    .container-right {
+      width: 100%; /* take up full width */
+    }
+  }
+  
+
+
+  .logo img{
+    padding-left: 35%;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+
+.input-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    display: inline-block;
+    position: relative;
+  }
+  .sefe{
+    text-align: center;
+  }
+  .sefe img{
+    width: 80%;
+    border-radius: 15px;
+  }
+  .label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 0 5px;
+    font-size: 12px;
+  }
+  
+  .input-container input[type="text"], .input-container input[type="password"] {
+    padding: 10px;
+    border: none;
+    width: 90%;
+  }
+  
+  
