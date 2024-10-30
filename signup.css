@@ -1,3 +1,4 @@
+
 body{
     margin: 0;
     padding: 0;
@@ -13,25 +14,31 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%; /* adjust the width as needed */
+    width: 100%; 
     max-width: 1400px;
-    margin: 0 auto; /* center the container */
+    margin: 0 auto; 
     height: 650px;
+    
   }
   
   .container-left {
     width: 50%; 
-    background-color: rgba(192, 241, 241, 0.589);
+    background-color: rgba(208, 157, 161, 0.875);
     max-width: 1200px;
-   
+    
   }
   
   .container-right {
-    width: 50%; /* adjust the width as needed */
-    min-width: 400px; /* minimum width */
+    width: 50%; 
+    min-width: 400px; 
+    background-image: url(./Assets/output-onlinepngtools.png);
+    background-size: cover;
+  
 
   }
-  
+  .container-right img{
+    
+  }
   /* media query for smaller screens */
 
 @media (max-width: 768px) {
@@ -52,6 +59,16 @@ body{
    padding-bottom: 0; 
    font-family: Arial, Helvetica, sans-serif;
 }
+.intro h3 {
+  color: white;
+  background-color: rgb(61, 38, 237);
+  border-radius: 30px;
+  border: none;
+  width: 260px;
+  height: 23px;
+  padding: 10; 
+  text-align: center;
+}
 
 .signup-cont{
   display: flex;
@@ -60,19 +77,17 @@ body{
 }
 
 .help{
-  padding-left: 24.5%; 
-  padding-top: 20px;
+  
+  padding-top: 7px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   
 }
 .help a{
-  margin-left: 40px;
+  margin-left: 5px;
   text-decoration: none;
   color: rgba(40, 95, 222, 0.876);
   font-weight: bolder;
-  
-  
 }
 
 
@@ -115,42 +130,45 @@ div.button-tive button:hover
   background-color: rgb(36, 181, 254) ;
   border: none;
 }
-#signin-form{
+#signup-form{
   padding-left: 25%;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
-.signin-label{
-  padding-left: 25%;
+.form-container {
+  
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .input-container {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    width: 47%;
-    display: inline-block;
-    position: relative;
-  }
-  .sefe{
-    text-align: center;
-  }
-  .sefe img{
-    width: 80%;
-    border-radius: 15px;
-  }
-  .label {
-    position: absolute;
-    top: -10px;
-    left: 10px;
-    background-color: #fff;
-    padding: 0 5px;
-    font-size: 12px;
-  }
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  width: 47%;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 15px;
+}
+.sefe{
+  text-align: center;
+}
+.sefe img{
+  width: 60%;
+  border-radius: 15px;
+}
+.label {
+  position: absolute;
+  top: -6px;
+  left: 10px;
+  background-color: #fff;
+  padding: 0 5px;
+  font-size: 12px;
   
-  .input-container input[type="text"], .input-container input[type="password"] {
-    padding: 10px;
+}
+  
+  .input-container input[type="text"], .input-container input[type="password"], .input-container input[type="email"], .input-container input[type="number"] {
+    padding: 7px;
     border: none;
     width: 90%;
   }
@@ -163,7 +181,7 @@ div.button-tive button:hover
    border: none;
    width: 260px;
    height: 35px;
-   margin-left: 5px; 
+   padding: 10;
    
     }
 

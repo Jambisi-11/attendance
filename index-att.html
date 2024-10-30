@@ -18,40 +18,85 @@
         </div>
     </div>
     <div class="container-right">
-        <div>
-            <h1>Welcome to SOFTWARE FRONTEND DEVELOPER COHORT 4.0</h1>
-            <H3>Need an Accunt?</H3>
-            <h2><a href="signup.html"></a>Sign Up</h2>
-            <h3> Facilitator</h3>
-            <h3> Student</h3>
-        </div>
-        <div>
+        <div class="container-inside">
+          <div class="intro">
+            <h3>Welcome to SEFE COHORT 4.0</h3>
+            <h5>SOFTWARE FRONTEND DEVELOPER</h5>
+          </div>
+              <ul class="signup-cont">
+                <li><H3>Need an Accunt?</H3></li> 
+                <li><h3><a href="signup.html">Sign Up</a></h3></li>
+              </ul>
+           
+            
+            <div class="button-tive">
+              <button class="fac">Facilitator</button>
+              <button class="stu">Student</button>
+            </div>
+          </div>
+        <div class="signin-label">
             <h2>Sign In</h2>
         </div>
         <div>
-     
             <form id="signin-form">
                 <div class="input-container">
-                  <div class="label">Matric Number-CHT4/24/SFT/___</div>
-                  <input type="text" id="username" name="username">
+                  <div class="label">Matric Number</div>
+                  <input type="text" id="username" name="username" placeholder="e.g. CHT4/24/SFT/___">
                 </div>
                 <br><br>
                 <div class="input-container">
                   <div class="label">Password</div>
-                  <input type="password" id="password" name="password">
+                  <input type="password" id="password" name="password" placeholder="************">
                 </div>              
               </form>
         </div>
-        <input type="checkbox" id="myCheckbox" name="myCheckbox">
-        <label for="myCheckbox">Remember Me</label>
-        <h3><a href="">Forgot Password</a></h3>
-        <input type="submit" value="Login">
+        <div class="help">
+          <div class="remb">
+            <input type="checkbox" id="myCheckbox" name="myCheckbox">
+            <label for="myCheckbox">Remember Me <span><a href="">Forgot Password</a></label>
+            <h4></h4>
+          </div>
+          
+          <div class="login-button">
+            <input type="submit" value="Login" onclick="handleLogin(event)">
+        </div>
     </div>
- </div>
- <!-- https://einfosoft.com/templates/admin/kuber/source/light/#/authentication/signin -->
-</body>
-
-
+    
+    <script>
+      function loadUserData() {
+          return fetch('https://script.google.com/macros/s/AKfycbyYYlTHw_21DMdVAMg2fdbJlxi0y-8uMzzo07xBcEv1Vr6bR-QlHktd9-RjFt3WXneM/exec') // Replace with your actual deployment URL
+              .then(response => {
+                  if (!response.ok) {
+                      throw new Error('Network response was not ok');
+                  }
+                  return response.json();
+              })
+              .catch(error => {
+                  console.error('Error fetching user data:', error);
+                  return [];
+              });
+      }
+    
+      async function handleLogin(event) {
+          event.preventDefault(); 
+    
+          const username = document.getElementById('username').value;
+          const password = document.getElementById('password').value;
+    
+          // Load user data from Google Sheets
+          const users = await loadUserData();
+    
+          // Check if the entered credentials match any user
+          const user = users.find(user => user.matricNumber === username && user.password === password);
+    
+          if (user) {
+              // Redirect to dashboard.html on successful login
+              window.location.href = 'dashboard.html';
+          } else {
+              alert('Invalid matric number or password. Please try again.');
+          }
+      }
+    </script>
 <!-- Yes, you can use HTML, CSS, and JS (JavaScript) to build a web app that interacts with Google Sheets. This is a great approach!
 
 Here's a high-level overview of how you can achieve your goal:

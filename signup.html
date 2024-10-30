@@ -1,20 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="body-container">
+        <div class="container-left">
+            <div class="logo">
+                <img src="./Assets/logo.png" alt="">
+            </div>
+            <div class="sefe">
+                <img src="./Assets/home2.png" alt="">
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="container-inside">
+                <div class="intro">
+                    <h3>Sign Up</h3>
+                    <h5>Enter these details to create your account</h5>
+                </div>
+                <div class="form-container">
+                    <form id="signup-form">
+                        <div class="input-container">
+                            <div class="label">Matric Number</div>
+                            <input type="text" id="matricNumber" name="username" value="CHT4/24/SFT/" required>
+                        </div>
 
-    
-<form>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name"><br><br>
-    <label for="id">ID:</label>
-    <input type="text" id="id" name="id"><br><br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email"><br><br>
-    <label for="class">Class/ Course:</label>
-    <select id="class" name="class">
-      <option value="Class 1">Class 1</option>
-      <option value="Class 2">Class 2</option>
-      <!-- Add more options as needed -->
-    </select><br><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password"><br><br>
-    <input type="submit" value="Signup">
-  </form>
-  
+                        <div class="input-container">
+                            <div class="label">Full Name</div>
+                            <input type="text" id="full-name" name="name" placeholder="Is this Your Full Name?" required disabled>
+                        </div>
+
+                        <div class="input-container">
+                            <div class="label">Email Address</div>
+                            <input type="email" id="email" name="email" placeholder="Yourusername@domain.com" required>
+                        </div>
+
+                        <div class="input-container">
+                            <div class="label">Phone Number</div>
+                            <input type="text" id="phone-number" name="phone-number" placeholder="+234 803000000000" required>
+                        </div>
+
+                        <div class="input-container">
+                            <div class="label">Password</div>
+                            <input type="password" id="password" name="password" placeholder="************" required>
+                        </div>
+
+                        <div class="input-container">
+                            <div class="label">Confirm Your Password</div>
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="************" required>
+                        </div>
+
+                        <!-- Help Section -->
+                        <div class="help">
+                            <label for="regist">Already Registered? 
+                                <span><a href="index-att.html">Login</a></span>
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="login-button">
+                            <input type="button" value="Sign Up" onclick="exportToExcel()">
+                        </div>
+                    </form>
+
+                    <!-- Result Display -->
+                    <div id="result"></div>
+
+                </div> <!-- End of form-container -->
+            </div> <!-- End of container-inside -->
+        </div> <!-- End of container-right -->
+    </div> <!-- End of body-container -->
+
+    <!-- Link to your JavaScript file -->
+    <script src="signup.js"></script>
+
+    <!-- Inline JavaScript for form submission -->
+    <script src="SaveExcel.js"></script>
+
+</body>
+</html>
